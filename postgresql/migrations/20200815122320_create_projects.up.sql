@@ -6,7 +6,6 @@ create table if not exists projects
     languages        json,
     num_commits      integer                           default 0,
     num_contributors integer                           default 0,
-    readiness        readiness                not null,
     last_sync_time   timestamp with time zone not null,
     create_time      timestamp with time zone not null default current_timestamp,
     update_time      timestamp with time zone not null default current_timestamp

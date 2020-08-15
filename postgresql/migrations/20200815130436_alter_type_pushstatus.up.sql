@@ -1,0 +1,1 @@
+alter type pushstatus add value if not exists 'WAITING' before 'READY';

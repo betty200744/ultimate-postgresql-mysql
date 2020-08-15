@@ -11,10 +11,9 @@ create table if not exists users
 (
     id           uuid primary key                  default gen_random_uuid(),
     username     varchar(255)             not null unique,
-    full_name    varchar(255),
+    fullname     varchar(255),
     phone_number varchar(28),
     password     char(60),
-    locations    varchar(255),
     create_time  timestamp with time zone not null default current_timestamp,
     update_time  timestamp with time zone not null default current_timestamp
 );

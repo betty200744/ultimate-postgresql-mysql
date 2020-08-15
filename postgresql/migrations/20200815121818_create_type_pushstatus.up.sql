@@ -1,0 +1,1 @@
+create type pushstatus as ENUM ('READY', 'UNDERWAY', 'FAILURE', 'UNSUPPORTED');

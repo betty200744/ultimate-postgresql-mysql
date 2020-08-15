@@ -8,7 +8,7 @@ localhost:
 ```
 - **4. SQL Syntax**
    - [4.1. Lexical Structure]()
-   - [4.2. Value Expressions | type cast](./postgresql/migrations/20200815134218_create_donation.up.sql)
+   - [4.2. Value Expressions | type cast](postgresql/migrations/20200815134218_create_sponsor.up.sql)
 - **5. Data Definition**
    - [5.1. Table Basics]()
    - [5.2. Default Values]()
@@ -46,7 +46,7 @@ localhost:
    - [8.11. Text Search Types]()
    - [8.12. UUID Type](./postgresql/migrations/20200814135132_create_user.up.sql)
    - [8.13. XML Type]()
-   - [8.14. JSON Types](./postgresql/migrations/20200815134218_create_donation.up.sql)
+   - [8.14. JSON Types](postgresql/migrations/20200815134218_create_sponsor.up.sql)
    - [8.15. Arrays]()
    - [8.16. Composite Types]()
    - [8.17. Range Types]()
@@ -151,7 +151,7 @@ localhost:
    - [ALTER TEXT SEARCH PARSER — change the definition of a text search parser]()
    - [ALTER TEXT SEARCH TEMPLATE — change the definition of a text search template]()
    - [ALTER TRIGGER — change the definition of a trigger]()
-   - [ALTER TYPE — change the definition of a type](./postgresql/migrations/20200815130436_alter_type_readiness.up.sql)
+   - [ALTER TYPE — change the definition of a type](postgresql/migrations/20200815130436_alter_type_pushstatus.up.sql)
    - [ALTER USER — change a database role]()
    - [ALTER USER MAPPING — change the definition of a user mapping]()
    - [ALTER VIEW — change the definition of a view]()
@@ -203,7 +203,7 @@ localhost:
    - [CREATE TEXT SEARCH TEMPLATE — define a new text search template]()
    - [CREATE TRANSFORM — define a new transform]()
    - [CREATE TRIGGER — define a new trigger](postgresql/migrations/20200814135132_create_user.up.sql)
-   - [CREATE TYPE — define a new data type](./postgresql/migrations/20200815121818_create_type_readiness.up.sql)
+   - [CREATE TYPE — define a new data type](postgresql/migrations/20200815121818_create_type_pushstatus.up.sql)
    - [CREATE USER — define a new database role]()
    - [CREATE USER MAPPING — define a new mapping of a user to a foreign server]()
    - [CREATE VIEW — define a new view]()

@@ -1,5 +1,5 @@
-create table if not exists tokens (
-  token varchar(6) primary key ,
-  email varchar(255) not null ,
-  expiration timestamp with time zone not null
+create table if not exists tokens
+(
+    token      varchar(6) primary key,
+    expiration timestamp with time zone not null
 );
