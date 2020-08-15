@@ -1,0 +1,1 @@
+alter table users drop primary_email_id;
