@@ -1,0 +1,1 @@
+alter type readiness add value if not exists 'WAITING' before 'READY';
