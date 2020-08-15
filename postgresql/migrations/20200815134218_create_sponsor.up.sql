@@ -3,7 +3,14 @@ $$
 begin
     return i + 1; -- operators
 end;
-$$ language plpgsql; -- Constants Dollar-Quoted String Constants
+$$ language plpgsql;
+-- Constants Dollar-Quoted String Constants
+create function add(integer, integer) returns integer as
+$$
+begin
+    return $1 + $2; -- position parameters
+end;
+$$ language plpgsql;
 create table if not exists sponsor
 (
     id            uuid                     not null primary key default gen_random_uuid(),

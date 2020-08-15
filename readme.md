@@ -7,7 +7,7 @@ localhost:
  
 ```
 - **4. SQL Syntax**
-   - [4.1. Lexical Structure]()
+   - [4.1. Lexical Structure](./postgresql/migrations/20200815134218_create_sponsor.up.sql)
    - [4.2. Value Expressions | type cast](postgresql/migrations/20200815134218_create_sponsor.up.sql)
 - **5. Data Definition**
    - [5.1. Table Basics]()
