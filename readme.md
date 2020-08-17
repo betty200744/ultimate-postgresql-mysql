@@ -21,7 +21,7 @@ localhost:
 - **6. Data Manipulation**
    - [6.1. Inserting Data](./postgresql/data_manipulation/user_log_inserting_data.sql)
    - [6.2. Updating Data](./postgresql/data_manipulation/user_log_inserting_data.sql)
-   - [6.3. Deleting Data]()
+   - [6.3. Deleting Data](./postgresql/data_manipulation/order_insert_update_query.sql)
    - [6.4. Returning Data From Modified Rows]()
 - **7. Queries**
    - [7.1. Overview]()
@@ -47,7 +47,8 @@ localhost:
    - [8.12. UUID Type](./postgresql/migrations/20200814135132_create_user.up.sql)
    - [8.13. XML Type]()
    - [8.14. JSON Types](postgresql/migrations/20200815134218_create_sponsor.up.sql)
-   - [8.15. Arrays]()
+   - [8.14. JSONB Types](postgresql/migrations/20200817163700_create_orders.up.sql)
+   - [8.15. Arrays](./postgresql/migrations/20200817163700_create_orders.up.sql)
    - [8.16. Composite Types]()
    - [8.17. Range Types](postgresql/migrations/20200815143131_create_showcase_rule.up.sql)
    - [8.18. Domain Types]()
