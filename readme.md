@@ -15,13 +15,14 @@ localhost:
    - [5.3. Constraints](./postgresql/migrations/20200815143131_create_showcase_rule.up.sql)
    - [5.5. Modifying Tables](./postgresql/migrations/20200815100413_alter_users_add_foreign_key.up.sql)
    - [5.7. Schemas](./postgresql/migrations/20200815143131_create_showcase_rule.up.sql)
-   - [5.9. Partitioning](./postgresql/migrations/20200816080623_create_user_log.up.sql) | [insert | query](./postgresql/data_manipulation/user_log_inserting_data.sql)
+   - [5.9. Table Partitioning](./postgresql/migrations/20200816080623_create_user_log.up.sql) | [insert | query](./postgresql/data_manipulation/user_log_inserting_data.sql)
    - [5.10. Other Database Objects]()
    - [5.11. Dependency Tracking]()
 - **6. Data Manipulation**
-   - [6.1. Inserting Data]()
-   - [6.2. Updating Data]()
+   - [6.1. Inserting Data](./postgresql/data_manipulation/user_log_inserting_data.sql)
+   - [6.2. Updating Data](./postgresql/data_manipulation/user_log_inserting_data.sql)
    - [6.3. Deleting Data]()
+   - [6.4. Returning Data From Modified Rows]()
 - **7. Queries**
    - [7.1. Overview]()
    - [7.2. Table Expressions]()
@@ -29,6 +30,8 @@ localhost:
    - [7.4. Combining Queries]()
    - [7.5. Sorting Rows]()
    - [7.6. LIMIT and OFFSET]()
+   - [7.7. VALUES Lists]()
+   - [7.8. WITH Queries (Common Table Expressions)](./postgresql/data_manipulation/projects_insert_data.sql)
 - **8. Data Types**
    - [8.1. Numeric Types](postgresql/migrations/20200815134218_create_sponsor.up.sql)
    - [8.2. Monetary Types]()
@@ -290,4 +293,4 @@ localhost:
    - [UNLISTEN — stop listening for a notification]()
    - [UPDATE — update rows of a table]()
    - [VACUUM — garbage-collect and optionally analyze a database]()
-   - [VALUES — compute a set of rows]()
+   - [VALUES — compute a set of rows](./postgresql/data_manipulation/emails_insert_data.sql)
