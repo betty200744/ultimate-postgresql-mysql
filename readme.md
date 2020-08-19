@@ -24,7 +24,8 @@ localhost:
    - [6.3. Deleting Data](./postgresql/data_manipulation/order_insert_update_query.sql)
    - [6.4. Returning Data From Modified Rows]()
 - **7. Queries**
-   - [7.1. Overview]()
+![](./img/query_processing.png)
+   - [7.1. Overview | parser | analyser | rewriter | planner | executor](http://www.interdb.jp/pg/pgsql03.html)
    - [7.2. Table Expressions]()
    - [7.3. Select Lists]()
    - [7.4. Combining Queries]()
@@ -32,6 +33,9 @@ localhost:
    - [7.6. LIMIT and OFFSET]()
    - [7.7. VALUES Lists]()
    - [7.8. WITH Queries (Common Table Expressions)](./postgresql/data_manipulation/projects_insert_data.sql)
+   - [7.9. Joins ｜ cross join 无on| inner join 有 on | left join left为主｜ right join为主](./postgresql/joins/joins.sql)
+   ![](./img/joins.png)
+   
 - **8. Data Types**
    - [8.1. Numeric Types | int2,int4,int8 | real,double precision | smallserial, serial, bigserial](postgresql/migrations/20200815134218_create_sponsor.up.sql)
    - [8.2. Monetary Types]()
@@ -93,23 +97,39 @@ localhost:
    - [10.5. UNION, CASE, and Related Constructs]()
 - **11. Indexes**
    - [11.1. Introduction](introduction.sql)
-   - [11.2. Index Types]()
-      - [Hash]()
-      - [Btree]()
-      - [GiST | B+ tree | generalized search tree]()
-      - [SP-GiST | space generalized search tree]()
-      - [GIN | Generalized Inverted Index]()
-      - [RUM]()
+   - [11.2. Index Types](https://postgrespro.com/blog/pgsql/3994098)
+      - [Hash](https://postgrespro.com/blog/pgsql/4161321)
+            ![](./img/hash_index_bitmap.png)
+      - [Btree](https://postgrespro.com/blog/pgsql/4161516)
+            ![](./img/b_tree_index_query_by_range.png)
+      - [GiST | B+ tree | generalized search tree](https://postgrespro.com/blog/pgsql/4175817)
+      - [SP-GiST | space generalized search tree](https://habr.com/en/company/postgrespro/blog/446624/)
+      - [GIN | Generalized Inverted Index](https://habr.com/en/company/postgrespro/blog/448746/)
+      - [RUM | BRIN ](https://habr.com/en/company/postgrespro/blog/452900/)
+     
    - [11.3. Multicolumn Indexes](introduction.sql)
    - [11.4. Indexes and ORDER BY](introduction.sql)
    - [11.5. Combining Multiple Indexes](introduction.sql)
    - [11.6. Unique Indexes](introduction.sql)
    - [11.7. Indexes on Expressions](introduction.sql)
    - [11.8. Partial Indexes](introduction.sql)
-   - [11.9. Index-Only Scans and Covering Indexes | Index scan | bitmap scan | bitmap heap scan | bitmap index scan | sequential scan | backward_scan](introduction.sql)
+   - [11.9. Index-Only Scans and Covering Indexes](introduction.sql) 
+      - [Index only scan, 最优， select， where , order 都命中index](./postgresql/indexes/b_tree.sql)
+      - [Index scan, 第二， where, order命中index](./postgresql/indexes/b_tree.sql)
+      - [Partial Index Scan，也是index scan， where, order命中index, 且match the partial index condition](./postgresql/indexes/b_tree.sql)
+      - [bitmap heap scan, bitmap index scan, 以下情况都走bitmap index scan](./postgresql/indexes/b_tree.sql)
+         - "where分开命中2个index"
+         - "相同index但是是or条件"
+         - "查询的数据大于pg_relation_size"
+      - [sequential scan , 没命中index](./postgresql/indexes/b_tree.sql)
+      - [backward_scan]()
+      - [Nested Loops join, 命中index, 且是limit数据](http://www.interdb.jp/pg/pgsql03.html) | [sql](./postgresql/indexes/b_tree.sql) 
+      - [Hash join, 没有命中index时， 或者无limit，全表join时](http://www.interdb.jp/pg/pgsql03.html) | [sql](./postgresql/indexes/b_tree.sql)
+      - [Merge join, 有order by时](http://www.interdb.jp/pg/pgsql03.html)  | [sql](./postgresql/indexes/b_tree.sql)
    - [11.10. Operator Classes and Operator Families]()
    - [11.11. Indexes and Collations](introduction.sql)
    - [11.12. Examining Index Usage](introduction.sql)
+   - [Index Obfuscation](./postgresql/indexes/b_tree.sql)
 - **12. Full Text Search**
    - [12.1. Introduction]()
    - [12.2. Tables and Indexes]()
@@ -123,18 +143,37 @@ localhost:
    - [12.10. psql Support]()
    - [12.11. Limitations]()
 - **13. Concurrency Control**
-   - [13.1. Introduction]()
-   - [13.2. Transaction Isolation]()
-   - [13.3. Explicit Locking]()
+   - [13.1. Introduction | Multiversion Concurrency Control, MVCC | locks | read not conflict write](./postgresql/concurrency_control/concurrency_control.sql)
+   - [13.2. Transaction Isolation | read commit | repeatable read | serializable](./postgresql/concurrency_control/concurrency_control.sql)
+   - [13.3. Explicit Locking | table-level lock | row-level lock | page-level lock | deadlocks | advisory locks](./postgresql/concurrency_control/concurrency_control.sql)
    - [13.4. Data Consistency Checks at the Application Level]()
    - [13.5. Caveats]()
-   - [13.6. Locking and Indexes]()
+   - [13.6. Locking and Indexes |  page-level locks]()
+   - [13.7. ACID | atomicity | consistency | isolation | durability]()
 - **14. Performance Tips**
    - [14.1. Using EXPLAIN]()
+     - cost - the first value represents the cost at which the node begins execution, while the second value is the estimated cost for when the execution is done
+     - rows - the estimated number of rows the node will produce.
+     - width - the estimated average row size in bytes for the current node.
+     - actual time - similar to the cost attribute, but represents the execution time in seconds
+     - rows - the actual number of rows that the node produced.
+     - loops - the number of times a node got executed
    - [14.2. Statistics Used by the Planner]()
    - [14.3. Controlling the Planner with Explicit JOIN Clauses]()
-   - [14.4. Populating a Database]()
+   - [14.4. Populating a Database | copy | prepare execute| Remove Indexes then Recreate indexes| create index in existing data | Remove Foreign Key Constraints]()
    - [14.5. Non-Durable Settings]()
+- **Internal**
+   - [Database Cluster, Databases and Tables](http://www.interdb.jp/pg/pgsql01.html)
+   - [Process and Memory Architecture](http://www.interdb.jp/pg/pgsql02.html)
+   - [Query Processing](http://www.interdb.jp/pg/pgsql03.html)
+   - [Foreign Data Wrappers (FDW) and Parallel Query](http://www.interdb.jp/pg/pgsql04.html)
+   - [Concurrency Control](http://www.interdb.jp/pg/pgsql05.html)
+   - [VACUUM Processing](http://www.interdb.jp/pg/pgsql06.html)
+   - [Heap Only Tuple (HOT) and Index-Only Scans](http://www.interdb.jp/pg/pgsql07.html)
+   - [Buffer Manager](http://www.interdb.jp/pg/pgsql08.html)
+   - [Write Ahead Logging (WAL)](http://www.interdb.jp/pg/pgsql09.html)
+   - [Base Backup and Point-In-Time Recovery (PITR)](http://www.interdb.jp/pg/pgsql10.html)
+   - [Streaming Replication](http://www.interdb.jp/pg/pgsql11.html)
 - **I. SQL Commands**
    - [ABORT — abort the current transaction]()
    - [ALTER AGGREGATE — change the definition of an aggregate function]()
