@@ -102,6 +102,19 @@
    - [24.7 Stored Program Binary Logging]()
    - [24.8 Restrictions on Stored Programs]()
    - [24.9 Restrictions on Views]()
+- **17 Replication**
+   - [17.1 Configuring Replication]()
+   - [17.2 Replication Implementation]()
+   - [17.3 Replication Security]()
+   - [17.4 Replication Solutions]()
+   - [17.5 Replication Notes and Tips]()
+- **23 Partitioning**
+   - [23.1 Overview of Partitioning in MySQL]()
+   - [23.2 Partitioning Types]()
+   - [23.3 Partition Management]()
+   - [23.4 Partition Pruning]()
+   - [23.5 Partition Selection]()
+   - [23.6 Restrictions and Limitations on Partitioning]()
 - **4 MySQL Programs**
    - [4.5.1 mysql — The MySQL Command-Line Client]()
    - [4.5.2 mysqladmin — Client for Administering a MySQL Server]()
@@ -111,6 +124,7 @@
    - [4.5.6 mysqlpump — A Database Backup Program]()
    - [4.5.7 mysqlshow — Display Database, Table, and Column Information]()
    - [4.5.8 mysqlslap — Load Emulation Client]()
+   
 **MongoDB**
 
 
