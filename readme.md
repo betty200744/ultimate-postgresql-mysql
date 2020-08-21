@@ -1,7 +1,11 @@
 
 **MySQL**
 - **1 General Information | SQL Syntax**
-   - [1.2 Typographical and Syntax Conventions | [] | "|" | {}](./mysql/queries/mysql_extensions.sql)
+   - [1.2 Typographical and Syntax Conventions 
+      - () , 一组
+      - [] , options 
+      - | , 枚举， 选一
+      - {}， 多选
    - [1.8 MySQL Standards Compliance | extensions | difference | constraints](./mysql/queries/mysql_extensions.sql)
    - [1.8.1 MySQL Standards Compliance extensions](./mysql/queries/mysql_extensions.sql)
    - [1.8.2 MySQL Standards Compliance difference](./mysql/queries/mysql_extensions.sql)
@@ -37,13 +41,33 @@
       -  [clone | set | show | describe | explain | help | use]()
 - **7. Queries**
 - **Optimizing**
-   - [8.2 Optimizing SQL Statements | select | subqueries | derived table | view | data change]()
-   - [8.3 Optimization and Indexes | primary key | foreign | column| multiple-column | InnoDB MyISAM index | B-Tree index | Hash Indexes]()
+   - [8.2 Optimizing SQL Statements ](./mysql/optimization/optimization_queries.sql)
+      - [8.2.1 Optimizing SELECT Statements | where 易读，避免全表扫 | range ](./mysql/optimization/optimization_queries.sql)
+      - [8.2.2 Optimizing Subqueries, Derived Tables, View References, and Common Table Expressions](./mysql/optimization/optimization_queries.sql)
+      - [8.2.3 Optimizing INFORMATION_SCHEMA Queries]()
+      - [8.2.4 Optimizing Performance Schema Queries]()
+      - [8.2.5 Optimizing Data Change Statements]()
+      - [8.2.6 Optimizing Database Privileges]()
+      - [8.2.7 Other Optimization Tips]()
+   - [8.3 Optimization Indexes]()
+      - [8.3.1 How MySQL Uses Indexes](./mysql/optimization/optimization_indexes.sql)
+      - [8.3.2 Primary Key Optimization](./mysql/optimization/optimization_indexes.sql)
+      - [8.3.3 SPATIAL Index Optimization](./mysql/optimization/optimization_indexes.sql)
+      - [8.3.4 Foreign Key Optimization](./mysql/optimization/optimization_indexes.sql)
+      - [8.3.5 Column Indexes](./mysql/optimization/optimization_indexes.sql)
+      - [8.3.6 Multiple-Column Indexes](./mysql/optimization/optimization_indexes.sql)
+      - [8.3.7 Verifying Index Usage](./mysql/optimization/optimization_indexes.sql)
+      - [8.3.8 InnoDB and MyISAM Index Statistics Collection](./mysql/optimization/optimization_indexes.sql)
+      - [8.3.9 Comparison of B-Tree and Hash Indexes](./mysql/optimization/optimization_indexes.sql)
+      - [8.3.10 Use of Index Extensions](./mysql/optimization/optimization_indexes.sql)
+      - [8.3.11 Optimizer Use of Generated Column Indexes](./mysql/optimization/optimization_indexes.sql)
+      - [8.3.12 Invisible Indexes](./mysql/optimization/optimization_indexes.sql)
+      - [8.3.13 Descending Indexes](./mysql/optimization/optimization_indexes.sql)
+      - [8.3.14 Indexed Lookups from TIMESTAMP Columns]()
    - [8.4 Optimizing Database Structure | data size | data type | table size | row size]()
    - [8.5 Optimizing for InnoDB Tables]()
    - [8.6 Optimizing for MyISAM Tables]()
-   - [8.7 Optimizing for MEMORY Tables]()
-   - [8.8 Understanding the Query Execution Plan]() 
+   - [8.8 Query Execution Plan]() 
    - [8.9 Controlling the Query Optimizer  | optimizer hints | index hints | cost]()
    - [8.10 Buffering and Caching]()
    - [8.11 Optimizing Locking Operations | internal lock | table lock | metadata lock | external lock]()
@@ -69,6 +93,15 @@
    - [12.21 Window Functions]()
    - [12.22 Performance Schema Functions]()
    - [12.23 Internal Functions]()
+- **24 Stored Objects**
+   - [24.2 Using Stored Routines]()
+   - [24.2.4 Stored Procedures, Functions, Triggers, and LAST_INSERT_ID()]()
+   - [24.3 Using Triggers]()
+   - [24.5 Using Views]()
+   - [24.6 Stored Object Access Control]()
+   - [24.7 Stored Program Binary Logging]()
+   - [24.8 Restrictions on Stored Programs]()
+   - [24.9 Restrictions on Views]()
 - **4 MySQL Programs**
    - [4.5.1 mysql — The MySQL Command-Line Client]()
    - [4.5.2 mysqladmin — Client for Administering a MySQL Server]()
@@ -78,33 +111,6 @@
    - [4.5.6 mysqlpump — A Database Backup Program]()
    - [4.5.7 mysqlshow — Display Database, Table, and Column Information]()
    - [4.5.8 mysqlslap — Load Emulation Client]()
-- **24 Stored Objects**
-   - [24.2 Using Stored Routines]()
-   - [24.2.1 Stored Routine Syntax]()
-   - [24.2.2 Stored Routines and MySQL Privileges]()
-   - [24.2.3 Stored Routine Metadata]()
-   - [24.2.4 Stored Procedures, Functions, Triggers, and LAST_INSERT_ID()]()
-   - [24.3 Using Triggers]()
-   - [24.3.1 Trigger Syntax and Examples]()
-   - [24.3.2 Trigger Metadata]()
-   - [24.4 Using the Event Scheduler]()
-   - [24.4.1 Event Scheduler Overview]()
-   - [24.4.2 Event Scheduler Configuration]()
-   - [24.4.3 Event Syntax]()
-   - [24.4.4 Event Metadata]()
-   - [24.4.5 Event Scheduler Status]()
-   - [24.4.6 The Event Scheduler and MySQL Privileges]()
-   - [24.5 Using Views]()
-   - [24.5.1 View Syntax]()
-   - [24.5.2 View Processing Algorithms]()
-   - [24.5.3 Updatable and Insertable Views]()
-   - [24.5.4 The View WITH CHECK OPTION Clause]()
-   - [24.5.5 View Metadata]()
-   - [24.6 Stored Object Access Control]()
-   - [24.7 Stored Program Binary Logging]()
-   - [24.8 Restrictions on Stored Programs]()
-   - [24.9 Restrictions on Views]()
-
 **MongoDB**
 
 
