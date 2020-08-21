@@ -1,3 +1,114 @@
+
+**MySQL**
+- **1 General Information | SQL Syntax**
+   - [1.2 Typographical and Syntax Conventions | [] | "|" | {}](./mysql/queries/mysql_extensions.sql)
+   - [1.8 MySQL Standards Compliance | extensions | difference | constraints](./mysql/queries/mysql_extensions.sql)
+   - [1.8.1 MySQL Standards Compliance extensions](./mysql/queries/mysql_extensions.sql)
+   - [1.8.2 MySQL Standards Compliance difference](./mysql/queries/mysql_extensions.sql)
+   - [1.8.2 MySQL Standards Compliance constraints](./mysql/queries/mysql_extensions.sql)
+- **9 Language Structure**
+   - [9.1 Literal Values | string | numeric | data time | boolean]()
+   - [9.2 Schema Object Names]()
+- **11 Data Types**
+   - [11.1 Numeric Data Types INTEGER, INT, SMALLINT, TINYINT, MEDIUMINT, BIGINT | Fixed-Point Types |Floating-Point Types]()
+   - [11.2 Date and Time Data Types | DATETIME, and TIMESTAMP Types](./mysql/data_types/data_types.sql)
+   - [11.3 String Data Types | char | varchar | text | enum | set](./mysql/ddl/create_employees.sql)
+   - [11.4 Spatial Data Types |Geometry Model](./mysql/data_types/data_types.sql)
+   - [11.5 The JSON Data Type](./mysql/data_types/data_types.sql)
+   - [11.6 Data Type Default Values](./mysql/data_types/data_types.sql)
+   - [11.7 Data Type Storage Requirements](./mysql/data_types/data_types.sql)
+   - [11.8 Choosing the Right Type for a Column](./mysql/data_types/data_types.sql)
+   - [11.9 Using Data Types from Other Database Engines](./mysql/data_types/data_types.sql)
+- **13 SQL Statements**
+   - **13.1 Data Definition Statements**
+      - [database | table |index](./mysql/ddl/create_employees.sql) 
+      - [trigger | view](mysql/ddl/create_view_dept_emp_lastest_date.sql) 
+      - [server | spatial ｜event | function | instance]()
+   - **13.2 Data Manipulation Statements**
+      - [insert | update | delete | select](./mysql/data_types/data_types.sql) 
+      - [do | import | table |values | with]()
+   - **13.3 Transactional and Locking Statements**
+      -  [START TRANSACTION, COMMIT, and ROLLBACK | savepoint]() 
+   - **13.4 Replication Statements**
+      -  [master | slave | group replication]()
+   - **13.5 Prepared Statements**
+      -  [prepare | execute | deallocate | compound | begin ... end | flow control | cursors]()
+   - **13.7 Database Administration Statements**
+      -  [clone | set | show | describe | explain | help | use]()
+- **7. Queries**
+- **Optimizing**
+   - [8.2 Optimizing SQL Statements | select | subqueries | derived table | view | data change]()
+   - [8.3 Optimization and Indexes | primary key | foreign | column| multiple-column | InnoDB MyISAM index | B-Tree index | Hash Indexes]()
+   - [8.4 Optimizing Database Structure | data size | data type | table size | row size]()
+   - [8.5 Optimizing for InnoDB Tables]()
+   - [8.6 Optimizing for MyISAM Tables]()
+   - [8.7 Optimizing for MEMORY Tables]()
+   - [8.8 Understanding the Query Execution Plan]() 
+   - [8.9 Controlling the Query Optimizer  | optimizer hints | index hints | cost]()
+   - [8.10 Buffering and Caching]()
+   - [8.11 Optimizing Locking Operations | internal lock | table lock | metadata lock | external lock]()
+- **12 Functions and Operators**
+   - [12.1 Function and Operator Reference]()
+   - [12.2 Type Conversion in Expression Evaluation]()
+   - [12.3 Operators | logical | comparison]()
+   - [12.4 Control Flow Functions]()
+   - [12.5 Numeric Functions and Operators]()
+   - [12.6 Date and Time Functions]()
+   - [12.7 String Functions and Operators]()
+   - [12.8 What Calendar Is Used By MySQL?]()
+   - [12.9 Full-Text Search Functions]()
+   - [12.10 Cast Functions and Operators]()
+   - [12.11 XML Functions]()
+   - [12.12 Bit Functions and Operators]()
+   - [12.13 Encryption and Compression Functions]()
+   - [12.14 Locking Functions]()
+   - [12.15 Information Functions]()
+   - [12.16 Spatial Analysis Functions]()
+   - [12.17 JSON Functions]()
+   - [12.20 Aggregate (GROUP BY) Functions]()
+   - [12.21 Window Functions]()
+   - [12.22 Performance Schema Functions]()
+   - [12.23 Internal Functions]()
+- **4 MySQL Programs**
+   - [4.5.1 mysql — The MySQL Command-Line Client]()
+   - [4.5.2 mysqladmin — Client for Administering a MySQL Server]()
+   - [4.5.3 mysqlcheck — A Table Maintenance Program]()
+   - [4.5.4 mysqldump — A Database Backup Program]()
+   - [4.5.5 mysqlimport — A Data Import Program]()
+   - [4.5.6 mysqlpump — A Database Backup Program]()
+   - [4.5.7 mysqlshow — Display Database, Table, and Column Information]()
+   - [4.5.8 mysqlslap — Load Emulation Client]()
+- **24 Stored Objects**
+   - [24.2 Using Stored Routines]()
+   - [24.2.1 Stored Routine Syntax]()
+   - [24.2.2 Stored Routines and MySQL Privileges]()
+   - [24.2.3 Stored Routine Metadata]()
+   - [24.2.4 Stored Procedures, Functions, Triggers, and LAST_INSERT_ID()]()
+   - [24.3 Using Triggers]()
+   - [24.3.1 Trigger Syntax and Examples]()
+   - [24.3.2 Trigger Metadata]()
+   - [24.4 Using the Event Scheduler]()
+   - [24.4.1 Event Scheduler Overview]()
+   - [24.4.2 Event Scheduler Configuration]()
+   - [24.4.3 Event Syntax]()
+   - [24.4.4 Event Metadata]()
+   - [24.4.5 Event Scheduler Status]()
+   - [24.4.6 The Event Scheduler and MySQL Privileges]()
+   - [24.5 Using Views]()
+   - [24.5.1 View Syntax]()
+   - [24.5.2 View Processing Algorithms]()
+   - [24.5.3 Updatable and Insertable Views]()
+   - [24.5.4 The View WITH CHECK OPTION Clause]()
+   - [24.5.5 View Metadata]()
+   - [24.6 Stored Object Access Control]()
+   - [24.7 Stored Program Binary Logging]()
+   - [24.8 Restrictions on Stored Programs]()
+   - [24.9 Restrictions on Views]()
+
+**MongoDB**
+
+
+**PostgreSQL**
 - **4. SQL Syntax**
    - [4.1. Lexical Structure](./postgresql/migrations/20200815134218_create_sponsor.up.sql)
    - [4.2. Value Expressions | type cast](postgresql/migrations/20200815134218_create_sponsor.up.sql)
@@ -261,7 +372,7 @@
    - [CREATE TYPE — define a new data type](postgresql/migrations/20200815121818_create_type_pushstatus.up.sql)
    - [CREATE USER — define a new database role]()
    - [CREATE USER MAPPING — define a new mapping of a user to a foreign server]()
-   - [CREATE VIEW — define a new view]()
+   - [CREATE VIEW — define a new view](mysql/ddl/create_view_dept_emp_lastest_date.sql)
    - [DEALLOCATE — deallocate a prepared statement]()
    - [DECLARE — define a cursor]()
    - [DELETE — delete rows of a table]()
