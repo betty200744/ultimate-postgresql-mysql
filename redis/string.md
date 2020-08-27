@@ -1,4 +1,7 @@
 
+
+* Binary-safe strings
+
 ```mysql
 
 127.0.0.1:6379>
