@@ -232,6 +232,10 @@
    - **13.7 Database Administration Statements**
       -  [clone | set | show | describe | explain | help | use]()
 - **7. Queries**
+      - [join | full | inner or cross | left | right ](./mysql/queries/join_output.sql)
+      - [join optimizing | inner | outer | semi | anti](./mysql/queries/join_inner_outer_semi_anti.sql)  
+      ![](./img/join_inner_outer_semi_anti.png)
+      
 - **Optimizing**
    - [8.2 Optimizing SQL Statements ](./mysql/optimization/optimization_queries.sql)
       - [8.2.1 Optimizing SELECT Statements | where 易读，避免全表扫 | range ](./mysql/optimization/optimization_sql_statements.sql)
