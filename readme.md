@@ -215,9 +215,11 @@
    - [11.9 Using Data Types from Other Database Engines](./mysql/data_types/data_types.sql)
 - **13 SQL Statements**
    - **13.1 Data Definition Statements**
-      - [database | table |index](./mysql/ddl/create_employees.sql) 
+      - [database | table ](./mysql/ddl/create_employees.sql) 
+      - [index](./mysql/optimization/optimization_sql_statements.sql) 
       - [trigger | view](mysql/ddl/create_view_dept_emp_lastest_date.sql) 
-      - [server | spatial ｜event | function | instance]()
+      - [server | spatial ｜event ]() 
+      - [function | instance]()
    - **13.2 Data Manipulation Statements**
       - [insert | update | delete | select](./mysql/data_types/data_types.sql) 
       - [do | import | table |values | with]()
@@ -232,7 +234,8 @@
 - **7. Queries**
 - **Optimizing**
    - [8.2 Optimizing SQL Statements ](./mysql/optimization/optimization_queries.sql)
-      - [8.2.1 Optimizing SELECT Statements | where 易读，避免全表扫 | range ](./mysql/optimization/optimization_queries.sql)
+      - [8.2.1 Optimizing SELECT Statements | where 易读，避免全表扫 | range ](./mysql/optimization/optimization_sql_statements.sql)
+      - [8.2.1 Optimizing SELECT Statements | Index lookup | Index Range Scan | Inner hash join | Nested loop inner join](./mysql/optimization/optimization_sql_statements.sql)
       - [8.2.2 Optimizing Subqueries, Derived Tables, View References, and Common Table Expressions](./mysql/optimization/optimization_queries.sql)
       - [8.2.3 Optimizing INFORMATION_SCHEMA Queries]()
       - [8.2.4 Optimizing Performance Schema Queries]()
