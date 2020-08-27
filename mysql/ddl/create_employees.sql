@@ -18,3 +18,16 @@ create table if not exists employees
 drop table if exists employees;
 describe employees;
 
+
+# create from exits table
+create table if not exists employees1 like employees;
+describe employees1;
+
+# copy data from exists table
+insert into employees1
+select *
+from employees;
+select *
+from employees1;
+
+

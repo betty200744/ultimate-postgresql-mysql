@@ -9,7 +9,8 @@ create table if not exists dep_manager
     foreign key (dept_no) references departments (dept_no) on delete cascade,
     primary key (emp_no, dept_no)
 );
-
+describe dept_manager;
+show table status from employees like 'dep_manager';
 -- dept_emp
 create table if not exists dept_emp
 (
