@@ -1,4 +1,7 @@
 -- 表结构设计， select , from ,  join, where,  order , limit , sub query, with,
+# select , where , limit 尽力要有
+# 能sub query的尽力sub query， 即
+# index， index lookup优于index Range Scan优于Nested loop semijoin优于
 
 # Index lookup
 # Index Range Scan , range查找
@@ -7,7 +10,7 @@
 
 show databases;
 # Table scan
-# where
+# select , where , limit
 create table if not exists t
 (
     c TINYINT UNSIGNED NOT NULL
