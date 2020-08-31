@@ -339,7 +339,7 @@
   - [sets](./redis/sets.md)
   - [sorted sets](./redis/sorted_sets.md)
   - [hashes](./redis/hashes.md)
-  - [transaction](./redis/transaction.md)
+  - [transaction](./redis/transaction.md) | [code](https://github.com/betty200744/ultimate-go/blob/master/awesome-go/go-redis/redisClient/watch.go)
   - [replication](./readme.md)
   - [persistence | RDB | AOF](./readme.md)
 
