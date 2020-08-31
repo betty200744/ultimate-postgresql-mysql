@@ -1,0 +1,5 @@
+ set a0 0
+ set a1 1
+ set a2 2
+ set a3 3
+ set a4 4

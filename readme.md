@@ -325,4 +325,21 @@
    - [4.5.8 mysqlslap — Load Emulation Client]()
    
 **MongoDB**
-   
+
+
+**redis**   
+![](./img/redis_data_structures.png)
+
+
+![redis cluster](./img/redis_cluster_shard_replica.png)
+
+
+  - [string](./redis/string.md)
+  - [lists](./redis/lists.md)
+  - [sets](./redis/sets.md)
+  - [sorted sets](./redis/sorted_sets.md)
+  - [hashes](./redis/hashes.md)
+  - [transaction](./redis/transaction.md)
+  - [replication](./readme.md)
+  - [persistence | RDB | AOF](./readme.md)
+
